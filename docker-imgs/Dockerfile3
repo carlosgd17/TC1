@@ -1,0 +1,9 @@
+FROM nginx
+
+ENV path=/usr/share/nginx/html
+
+RUN for i in 7 8 9; do echo "$i" >> $path/prueba.txt; done
+
+
+
+

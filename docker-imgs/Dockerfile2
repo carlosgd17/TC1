@@ -1,0 +1,24 @@
+FROM centos:7
+
+RUN yum install httpd -y
+
+WORKDIR /var/www/html
+
+ENV contenido=prueba
+
+COPY PaginaWeb .
+
+RUN echo "${contenido}" > ./prueba.html
+RUN echo "$(whoami)" > ./user.html
+
+RUN useradd Pepe
+USER Pepe  
+
+RUN echo "$(whoami)" > /tmp/user2.html
+
+USER root
+RUN cp /tmp/user2.html .
+
+#INICIAR apacher de fondo
+CMD ["apachectl", "-D", "FOREGROUND"]
+
