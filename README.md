@@ -48,6 +48,26 @@ sudo docker exec -ti env bash
 ---
 
 
+After pulling the Jenkins image using `docker pull jenkins/jenkins`, you can create a Docker container from this image using the `docker run` command. 
+
+Here's an example:
+
+```bash
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins
+```
+
+Here's what each part of the command does:
+
+- `docker run`: This is the command to start a new Docker container.
+- `-d`: This option starts the container in detached mode, which means it runs in the background.
+- `-p 8080:8080 -p 50000:50000`: These options map port 8080 and port 50000 inside the Docker container to port 8080 and port 50000 on your host machine. Jenkins runs on port 8080 and it uses port 50000 for slave agents.
+- `--name myjenkins`: This option sets the name of the container to `myjenkins`.
+- `jenkins/jenkins`: This is the name of the Docker image to use to create the container.
+
+After running this command, you should have a Jenkins server running in a Docker container, and you can access it by navigating to `http://localhost:8080` in a web browser on your host machine.
+
+---
+
 # DB
 Levantar y crear una db
 **alumno**\
