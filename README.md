@@ -115,3 +115,11 @@ uri...?allowPublicKeyRetrieval=true&useSSL=false
 ```
 docker run --name mysql -v "$pwd/mysql/":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1712253 -e MYSQL_DATABASE="docker-db" -e MYSQL_USER="docker-user" -e MYSQL_PASSWORD=1712253 -p 3306:3306 -d mysql
 ```
+
+## named volumes
+```
+// creating a named volume
+docker volume create vol-controlescolar
+// creating a docker inside the named volume
+docker run --name mysql -v vol-controlescolar:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1712253 -e MYSQL_DATABASE="docker-db" -e MYSQL_USER="docker-user" -e MYSQL_PASSWORD=1712253 -p 3306:3306 -d mysql
+```
