@@ -99,3 +99,15 @@ docker run --name mongo -p 27017:27017 -d mongo
 ```
 
 DB client studio 3t
+
+
+---
+#MySQL
+
+```
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=1712253 -e MYSQL_DATABASE="docker-db" -e MYSQL_USER="docker-user" -e MYSQL_PASSWORD=1712253 -p 3306:3306 -d mysql
+```
+when connecting to the db
+```
+uri...?allowPublicKeyRetrieval=true&useSSL=false
+```
