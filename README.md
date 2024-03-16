@@ -90,3 +90,12 @@ CREATE DATABASE dev;
 \c dev
 
 ```
+
+---
+#Mongo DB
+On port 27017
+```
+docker run --name mongo -p 27017:27017 -d mongo
+```
+
+DB client studio 3t
