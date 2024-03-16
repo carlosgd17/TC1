@@ -31,12 +31,6 @@ To add an environment variable, you need to add
 -e "variable=value"
 ```
 
-
-## jenkins
-. carlos
-
-. 1712253
-
 ---
 ```
 sudo docker build -t env -f Dockerfile2 .
@@ -46,6 +40,12 @@ sudo docker run -d --name env env
 sudo docker exec -ti env bash
 ```
 ---
+
+
+## jenkins
+. carlos
+
+. 1712253
 
 
 After pulling the Jenkins image using `docker pull jenkins/jenkins`, you can create a Docker container from this image using the `docker run` command. 
