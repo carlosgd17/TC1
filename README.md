@@ -111,3 +111,7 @@ when connecting to the db
 ```
 uri...?allowPublicKeyRetrieval=true&useSSL=false
 ```
+## using volumes
+```
+docker run --name mysql -v "$pwd/mysql/":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1712253 -e MYSQL_DATABASE="docker-db" -e MYSQL_USER="docker-user" -e MYSQL_PASSWORD=1712253 -p 3306:3306 -d mysql
+```
