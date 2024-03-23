@@ -123,3 +123,15 @@ docker volume create vol-controlescolar
 // creating a docker inside the named volume
 docker run --name mysql -v vol-controlescolar:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1712253 -e MYSQL_DATABASE="docker-db" -e MYSQL_USER="docker-user" -e MYSQL_PASSWORD=1712253 -p 3306:3306 -d mysql
 ```
+
+
+# Nets
+To create a subnet named **red-prueba**
+```
+docker network create -d bridge --subnet 192.168.30.0/24 --gateway 192.168.30.1 red-prueba
+```
+
+To create a container inside the **red-prueba** network
+```
+docker run --network  red-prueba --name centosNet1 -dti centos
+```
