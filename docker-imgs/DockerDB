@@ -1,0 +1,6 @@
+FROM mysql:latest
+
+crear variables de entorno
+exponer puerto
+
+crear bd y tabla
